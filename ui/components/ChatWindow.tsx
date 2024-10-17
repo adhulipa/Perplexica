@@ -166,7 +166,7 @@ const useSocket = (
         const timeoutId = setTimeout(() => {
           if (ws.readyState !== 1) {
             toast.error(
-              'Failed to connect to the server. Please try again later.',
+              'Timeout resulting in failure to connect to the server. Please try again later.',
             );
           }
         }, 10000);
@@ -488,7 +488,7 @@ const ChatWindow = ({ id }: { id?: string }) => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
         <p className="dark:text-white/70 text-black/70 text-sm">
-          Failed to connect to the server. Please try again later.
+          Error exists. Failed to connect to the server. Please try again later.
         </p>
       </div>
     );
